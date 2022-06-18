@@ -9,8 +9,7 @@ const ContactList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getInitialContact());
-    console.log('useEffect');
-  });
+  }, [dispatch]);
   const filteredContacts = useSelector(getFilteredContacts);
   return (
     <ul>
